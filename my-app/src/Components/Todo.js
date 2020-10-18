@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import TodoForm from './TodoForm'
 import {RiCloseCircleLine} from 'react-icons/ri';
 import {TiEdit} from 'react-icons/ti';
+import "./Todo.css"
 
 
 function Todo({todo, completeTodo, removeTodo, updateTodo}) {
@@ -25,14 +26,13 @@ function Todo({todo, completeTodo, removeTodo, updateTodo}) {
  
     return todo.map((todo, index) => (
         <div className={todo.isComplete ? 'todo-row complete' : 'todo-row'} key={index}>
-            <div key={todo.id} onClick={() => completeTodo(todo.id)}>
+            <div className="todo-container" key={todo.id} onClick={() => completeTodo(todo.id)}>
                 {todo.text}
             </div>
 
             <div className="icons">
                 <RiCloseCircleLine onClick={() => removeTodo(todo.id)} className='delete-icons'/>
                 <TiEdit onClick={() => setEdit({id: todo.id, value: todo.text})} className='edit-icons'/>
-
             </div>
 
         </div>
