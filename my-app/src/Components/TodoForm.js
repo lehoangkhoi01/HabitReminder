@@ -1,8 +1,13 @@
 import React, {useState, useEffect, useRef} from 'react'
+import { TimePicker } from 'antd';
+import moment, { duration } from 'moment';
 import "./TodoForm.css"
 
 function TodoForm(props) {
     const [input, setInput] = useState('')
+    const [time, setTime] = useState(moment('00:00:00', 'HH:mm:ss'))
+    const timeNow = moment()
+
     const inputRef = useRef(null)
     useEffect(() => {
         inputRef.current.focus()
@@ -16,12 +21,16 @@ function TodoForm(props) {
         e.preventDefault();
         props.onSubmit({
             id: Math.floor(Math.random() * 10000),
-            text: input
+            content: {
+              text: input,
+              deadline: time.format('LTS'),
+              duration: time.diff(timeNow,"seconds")
+            }
         })
         setInput('');
+        setTime(moment('00:00:00', 'HH:mm:ss'));  
     };
     
-
     return (
         <form onSubmit={handleSubmit} className='todo-form'>
       {props.edit ? (
@@ -34,23 +43,41 @@ function TodoForm(props) {
             ref={inputRef}
             className='todo-input edit'
           />
-          <button onClick={handleSubmit} className='todo-button edit'>
-            Update
-          </button>
+          <div className="row">
+            <TimePicker 
+              defaultValue={moment('00:00:00', 'HH:mm:ss')} 
+              className="time-picker"
+              value={time}
+              allowClear={false}
+              onChange={setTime}/>
+
+            <button onClick={handleSubmit} className='todo-button edit'>
+              Update
+            </button>
+          </div>
         </>
       ) : (
         <>
           <input
-            placeholder='Add a todo'
+            placeholder='Add an action'
             value={input}
             onChange={handleChange}
             name='text'
             className='todo-input'
             ref={inputRef}
           />
-          <button onClick={handleSubmit} className='todo-button'>
-            Add todo
-          </button>
+          <div className="row">
+            <TimePicker 
+              defaultValue={moment('00:00:00', 'HH:mm:ss')} 
+              value={time} 
+              onChange={setTime}
+              allowClear={false}
+              className="time-picker"/>
+
+            <button onClick={handleSubmit} className='todo-button'>
+              Add habit
+            </button>
+          </div>
         </>
       )}
     </form>

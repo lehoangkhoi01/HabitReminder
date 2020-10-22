@@ -3,12 +3,6 @@
     opacity: 0.4;
 }
 
-.todo-container {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-}
-
 .todo-row {
     display: flex;
     justify-content: space-between;
@@ -23,6 +17,7 @@
     padding: 16px;
     border-radius: 5px;
     width: 90%;
+    font-size: 1.3em;
 }
 
 .todo-row:nth-child(4n + 1) {
@@ -52,16 +47,19 @@
 .icons {
     display: flex;
     align-items: center;
-    font-size: 24px;
+    font-size: 28px;
     cursor: pointer;
 }
 
-.delete-icon {
+.delete-icons {
     margin-right: 5px;
-    color: #fff;
 }
 
-.edit-icon {
-    color: #fff;
+.delete-icons:hover {
+    color: red;
+}
+
+.edit-icons:hover {
+    color: red;
 }
 

@@ -1,33 +1,45 @@
 .todo-form {
-    margin-bottom: 32px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5% 0 5%;
 }
 
 .todo-input {
-    padding: 14px 32px 14px 16px;
+    padding: 16px 32px 14px 16px;
     border-radius: 4px 0 0 4px;
     border: 2px solid #5d0cff;
     outline: none;
-    width: 320px;
+    width: 100%;
     background: transparent;
     color: #fff;
+    font-size: 16px;
+    margin-bottom: 2em;
 }
 
 .todo-input::placeholder {
     color: #e2e2e2;
-    font-size: 22px;
+    font-size: 20px;
+}
+
+.row {
+    display: flex;
+    width: 100%;
 }
 
 .todo-button {
     padding: 12px;
     border: none;
-    border-radius: 0 4px 4px 0;
+    border-radius: 5px;
     cursor: pointer;
     outline: none;
     background: linear-gradient(90deg,rgba(93, 12, 255, 1) 0%,rgba(155, 0, 250, 1) 100%);
     color: #fff;
     text-transform: capitalize;
-    font-size: 22px;
-    
+    font-size: 21px;
+    width: 30%;
 }
 
 .todo-input.edit {
@@ -41,4 +53,22 @@
       rgba(17, 122, 255, 1) 100%
     );
     padding: 16px 22px;
+}
+
+.time-picker {
+    width: 30%;
+    background-color: transparent;
+    font-size: 2em;
+    border: 2px solid #5d0cff;
+    padding: 10px 5px 10px 5px;
+    margin-right: 10%;
+}
+
+.ant-picker-suffix {
+    color: #fff;
+}
+
+.ant-picker-input > input {
+    color: #fff;
+    font-size: 18px;   
 }
