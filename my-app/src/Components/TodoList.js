@@ -34,7 +34,6 @@ function TodoList() {
         if (!todos[id]){
             return;
         }
-        console.log("onAlert");
         const timeout = setAlertTodo(todos[id], onAlert);
         setTimeoutManager((manager) => {
             manager[id] = timeout;
@@ -44,8 +43,7 @@ function TodoList() {
         let manager = setTimeout(() => {
             openNotification("bottomRight", todo);
             cb(todo.id);
-        }, todo.content.duration * 1000);
-        // console.log(`setAlert =>>${manager}`)
+        }, todo.content.duration * 1000 - 1800000);
         return manager;
     }
 
@@ -54,7 +52,7 @@ function TodoList() {
             return;
         }
         setTodos(prev => prev.map(item => (item.id) === todoId ? newValue : item))
-        
+        clearTimeout(timeoutManager[todoId])
 
         const timeout = setAlertTodo(newValue, onAlert); // update new timeout
         setTimeoutManager((manager) => {
@@ -70,7 +68,6 @@ function TodoList() {
         const removeArr=[...todos].filter(el=>el.id !== todo.id)
         setTodos(removeArr)
         clearTimeout(timeoutManager[todo.id])
-        // console.log(timeoutManager[todo.id])
     }
 
     // const completeTodo = id => {
@@ -94,7 +91,7 @@ function TodoList() {
         notification.info({
           message: `Notification ${todo.content.text}`,
           description:
-            'You have deadline in 30 minutes',
+            'You have deadline',
           placement,
         });
     }
