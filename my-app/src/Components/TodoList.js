@@ -43,7 +43,7 @@ function TodoList() {
         let manager = setTimeout(() => {
             openNotification("bottomRight", todo);
             cb(todo.id);
-        }, todo.content.duration >= 0 ? todo.content.duration - 1800 : todo.content.duration + 84600);
+        }, todo.content.duration >= 0 ? todo.content.duration * 1000 - 1800000 : todo.content.duration*1000 + 84600000);
         console.log(manager)
         return manager;
     }
