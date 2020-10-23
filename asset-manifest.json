@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/HabitReminder/static/css/main.c7308880.chunk.css",
-    "main.js": "/HabitReminder/static/js/main.7162b6b1.chunk.js",
-    "main.js.map": "/HabitReminder/static/js/main.7162b6b1.chunk.js.map",
+    "main.js": "/HabitReminder/static/js/main.cfe0efa3.chunk.js",
+    "main.js.map": "/HabitReminder/static/js/main.cfe0efa3.chunk.js.map",
     "runtime-main.js": "/HabitReminder/static/js/runtime-main.cf5ac7a3.js",
     "runtime-main.js.map": "/HabitReminder/static/js/runtime-main.cf5ac7a3.js.map",
     "static/css/2.e10332d9.chunk.css": "/HabitReminder/static/css/2.e10332d9.chunk.css",
     "static/js/2.8188f282.chunk.js": "/HabitReminder/static/js/2.8188f282.chunk.js",
     "static/js/2.8188f282.chunk.js.map": "/HabitReminder/static/js/2.8188f282.chunk.js.map",
     "index.html": "/HabitReminder/index.html",
-    "precache-manifest.3429e62b5f32cfdd883cd98c5e0c1655.js": "/HabitReminder/precache-manifest.3429e62b5f32cfdd883cd98c5e0c1655.js",
+    "precache-manifest.1bb6caa4a9a45563a0ddaf815b18e7e8.js": "/HabitReminder/precache-manifest.1bb6caa4a9a45563a0ddaf815b18e7e8.js",
     "service-worker.js": "/HabitReminder/service-worker.js",
     "static/css/2.e10332d9.chunk.css.map": "/HabitReminder/static/css/2.e10332d9.chunk.css.map",
     "static/css/main.c7308880.chunk.css.map": "/HabitReminder/static/css/main.c7308880.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.e10332d9.chunk.css",
     "static/js/2.8188f282.chunk.js",
     "static/css/main.c7308880.chunk.css",
-    "static/js/main.7162b6b1.chunk.js"
+    "static/js/main.cfe0efa3.chunk.js"
   ]
 }
