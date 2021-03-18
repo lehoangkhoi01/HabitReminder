@@ -6,4 +6,4 @@
 *  React app guidline
 #### Have fun with my app and feel free to give me any comments
 #### Connect me via: [FB](https://facebook.com)
-#### @KhoiLH 2022
+#### @KhoiLH 2021
